@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Tulugu Sangeetha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyber: { 400: '#38bdf8', 500: '#06b6d4', 600: '#0284c7' },
+                        neonPink: '#ff007f',
+                        neonPurple: '#a855f7',
+                        neonYellow: '#facc15',
+                        brightViolet: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 transition-colors duration-400 min-h-screen flex flex-col justify-between" id="bodyElement">
+
+    <header class="sticky top-0 z-50 bg-slate-950/80 dark:bg-slate-950/80 light:bg-white/80 backdrop-blur-xl border-b border-cyan-500/20 dark:border-cyan-500/20 light:border-indigo-300/40 transition-colors">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative">
+                    <img src="logo.jpeg" alt="Tulugu Sangeetha Profile Avatar" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-cyan-400 dark:border-cyan-400 light:border-indigo-600 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full animate-ping"></span>
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full"></span>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-gradient-neon dark:text-gradient-neon light:text-gradient-bright">
+                        TULUGU SANGEETHA
+                    </span>
+                    <span class="block text-[11px] font-mono font-bold tracking-widest text-cyan-400 dark:text-cyan-400 light:text-indigo-600 uppercase">
+                        Cybersecurity Specialist
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-7 text-sm font-bold">
+                <a href="index.html" id="nav-home" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Home</a>
+                <a href="about.html" id="nav-about" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">About Me</a>
+                <a href="skills.html" id="nav-skills" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Skills</a>
+                <a href="certificates & Resume.html" id="nav-certificates" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Certificates & Resume</a>
+                <a href="projects.html" id="nav-projects" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Projects</a>
+                <a href="contact.html" id="nav-contact" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Bright/Dark Mode" class="px-3.5 py-2 rounded-xl bg-slate-900 light:bg-indigo-100/80 border border-cyan-500/30 light:border-indigo-400 text-cyan-400 light:text-indigo-700 font-bold text-xs flex items-center gap-2 hover:scale-105 transition-all shadow-md">
+                    <i id="themeIcon" class="fa-solid fa-sun text-yellow-400 text-sm"></i>
+                    <span id="themeLabel">Glowing Bright</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-600 border border-cyan-500/30">
+                    <i class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden border-b border-cyan-500/20 bg-slate-950 light:bg-white px-6 pt-3 pb-6 space-y-3 font-semibold text-sm">
+            <a href="index.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Home</a>
+            <a href="about.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">About Me</a>
+            <a href="skills.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Skills</a>
+            <a href="certificates & Resume.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Certificates & Resume</a>
+            <a href="projects.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Projects</a>
+            <a href="contact.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <section id="section-projects" class="py-6">
+            <div class="text-center mb-8">
+                <span class="text-xs font-mono font-bold tracking-widest text-cyan-400 light:text-indigo-600 uppercase">PRACTICAL REPOSITORIES</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-1">All 8 Projects</h2>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+                <button onclick="filterProjects('all')" id="btn-filter-all" class="px-5 py-2 rounded-xl bg-cyan-500 text-slate-950 font-extrabold text-xs shadow-lg transition-all">All Projects (8)</button>
+                <button onclick="filterProjects('cyber')" id="btn-filter-cyber" class="px-5 py-2 rounded-xl bg-slate-900 light:bg-slate-200 text-slate-300 light:text-slate-700 font-bold text-xs hover:text-cyan-400 transition-all">Cybersecurity & Logs</button>
+                <button onclick="filterProjects('aiml')" id="btn-filter-aiml" class="px-5 py-2 rounded-xl bg-slate-900 light:bg-slate-200 text-slate-300 light:text-slate-700 font-bold text-xs hover:text-cyan-400 transition-all">AI / Vision & Navigation</button>
+                <button onclick="filterProjects('python')" id="btn-filter-python" class="px-5 py-2 rounded-xl bg-slate-900 light:bg-slate-200 text-slate-300 light:text-slate-700 font-bold text-xs hover:text-cyan-400 transition-all">Python Tools</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="project-card cyber aiml dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-cyan-400 light:text-indigo-600 font-bold">PROJECT 01</span>
+                            <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 light:text-indigo-700 rounded-full text-xs font-bold">AI & Vision</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">1. AI Attendance Tracker</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Automated facial recognition system built in Python to log student attendance seamlessly and accurately into database records.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">OpenCV</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/Attedance-tracker-" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-cyan-400 light:text-white border border-cyan-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-cyan-500 hover:text-slate-950 transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card aiml dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-purple-400 light:text-purple-600 font-bold">PROJECT 02</span>
+                            <span class="px-3 py-1 bg-purple-500/10 text-purple-400 light:text-purple-700 rounded-full text-xs font-bold">Deep Learning</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">2. AI Attendance System</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Comprehensive deep learning framework designed to verify identities in real-time, eliminating proxy entries in classroom environments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-purple-400 light:text-purple-700 text-[11px] font-mono font-bold rounded-lg">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-purple-400 light:text-purple-700 text-[11px] font-mono font-bold rounded-lg">Machine Learning</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/ai-attendance-system" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-purple-400 light:text-white border border-purple-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-purple-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card cyber dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-pink-400 light:text-rose-600 font-bold">PROJECT 03</span>
+                            <span class="px-3 py-1 bg-pink-500/10 text-pink-400 light:text-rose-700 rounded-full text-xs font-bold">Cybersecurity</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">3. Security Log Analyzer</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Security log auditing script built to analyze network server logs, detect repeated failed SSH attempts, and flag potential brute-force attacks.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-pink-400 light:text-rose-700 text-[11px] font-mono font-bold rounded-lg">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-pink-400 light:text-rose-700 text-[11px] font-mono font-bold rounded-lg">Security Auditing</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/security-log-analyzer" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-pink-400 light:text-white border border-pink-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-pink-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card python dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-amber-400 light:text-amber-600 font-bold">PROJECT 04</span>
+                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 light:text-amber-700 rounded-full text-xs font-bold">Logic Game</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">4. Tic-Tac-Toe</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Interactive game logic algorithm implementing grid matrix verification, turn management, and win condition checking in Python.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-amber-400 light:text-amber-700 text-[11px] font-mono font-bold rounded-lg">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-amber-400 light:text-amber-700 text-[11px] font-mono font-bold rounded-lg">Algorithmic Logic</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-amber-400 light:text-white border border-amber-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-amber-500 hover:text-slate-950 transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card python dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-emerald-400 light:text-emerald-600 font-bold">PROJECT 05</span>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 light:text-emerald-700 rounded-full text-xs font-bold">Utility</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">5. Stock Portfolio Tracker</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Financial utility built with Python to monitor share values, dynamically calculate percentage returns, and structure stock portfolios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-emerald-400 light:text-emerald-700 text-[11px] font-mono font-bold rounded-lg">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-emerald-400 light:text-emerald-700 text-[11px] font-mono font-bold rounded-lg">Data Math</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/stock_tracker.py" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-emerald-400 light:text-white border border-emerald-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-emerald-500 hover:text-slate-950 transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card cyber python dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-cyan-400 light:text-indigo-600 font-bold">PROJECT 06</span>
+                            <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 light:text-indigo-700 rounded-full text-xs font-bold">Analytics & Security</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">6. Python Security Log Analyzer</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Advanced Python parser utilizing Pandas and Matplotlib to visualize access traffic, render attack graphs, and generate JSON reports.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">Pandas</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">Matplotlib</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/tulugusangeetha3-star/Python-Log-Analyzer" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-slate-900 light:bg-indigo-600 text-cyan-400 light:text-white border border-cyan-500/30 font-bold text-xs flex items-center justify-center gap-2 hover:bg-cyan-500 hover:text-slate-950 transition-colors">
+                        <i class="fa-brands fa-github text-base"></i> View GitHub Repository
+                    </a>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card aiml dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between md:col-span-2 border-cyan-500/40">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-cyan-400 light:text-indigo-600 font-bold">PROJECT 07 — SIH 2026 FEATURED</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 light:text-indigo-800 rounded-full text-xs font-extrabold">AI / ML Navigation</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">7. DRIVE-X – AI/ML Navigation System</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            Developed for Smart India Hackathon (SIH) 2026: AI/ML Dead Reckoning system designed to maintain positioning accuracy during satellite signal outages or sensor disruptions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">Dead Reckoning</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">AI / ML Navigation</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-700 text-[11px] font-mono font-bold rounded-lg">SIH 2026</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 light:border-slate-200 text-xs font-bold text-slate-400">
+                        <span><i class="fa-solid fa-trophy text-amber-400 mr-1"></i> SIH Innovation Challenge</span>
+                        <span class="text-cyan-400 light:text-indigo-600">Repository On-Demand</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card python dark-glass light-glass p-6 sm:p-8 rounded-3xl border glow-hover flex flex-col justify-between md:col-span-2">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono text-purple-400 light:text-purple-600 font-bold">PROJECT 08</span>
+                            <span class="px-3 py-1 bg-purple-500/10 text-purple-400 light:text-purple-700 rounded-full text-xs font-bold">Automation Scripts</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-100 light:text-slate-900 mb-2">8. Automation Project</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 light:text-slate-600 mb-4 leading-relaxed">
+                            A suite of Python automation tools created to clean file systems, organize directories, parse system information, and trigger task execution.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-purple-400 light:text-purple-700 text-[11px] font-mono font-bold rounded-lg">Python Automation</span>
+                            <span class="px-2.5 py-1 bg-slate-900 light:bg-slate-200 text-purple-400 light:text-purple-700 text-[11px] font-mono font-bold rounded-lg">File System IO</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 light:border-slate-200 text-xs font-bold text-slate-400">
+                        <span><i class="fa-solid fa-terminal text-purple-400 mr-1"></i> Automation Suite</span>
+                        <a href="https://github.com/tulugusangeetha3-star" target="_blank" rel="noopener noreferrer" class="text-purple-400 light:text-purple-600 hover:underline">Explore GitHub Account →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-cyan-500/20 light:border-slate-200 bg-slate-950 light:bg-white py-6 text-center text-xs text-slate-500 light:text-slate-600">
+        <p>© 2026 Tulugu Sangeetha. B.Tech CSE (Cyber Security) Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Tulugu Sangeetha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyber: { 400: '#38bdf8', 500: '#06b6d4', 600: '#0284c7' },
+                        neonPink: '#ff007f',
+                        neonPurple: '#a855f7',
+                        neonYellow: '#facc15',
+                        brightViolet: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 transition-colors duration-400 min-h-screen flex flex-col justify-between" id="bodyElement">
+
+    <header class="sticky top-0 z-50 bg-slate-950/80 dark:bg-slate-950/80 light:bg-white/80 backdrop-blur-xl border-b border-cyan-500/20 dark:border-cyan-500/20 light:border-indigo-300/40 transition-colors">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative">
+                    <img src="logo.jpeg" alt="Tulugu Sangeetha Profile Avatar" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-cyan-400 dark:border-cyan-400 light:border-indigo-600 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full animate-ping"></span>
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full"></span>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-gradient-neon dark:text-gradient-neon light:text-gradient-bright">
+                        TULUGU SANGEETHA
+                    </span>
+                    <span class="block text-[11px] font-mono font-bold tracking-widest text-cyan-400 dark:text-cyan-400 light:text-indigo-600 uppercase">
+                        Cybersecurity Specialist
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-7 text-sm font-bold">
+                <a href="index.html" id="nav-home" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Home</a>
+                <a href="about.html" id="nav-about" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">About Me</a>
+                <a href="skills.html" id="nav-skills" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Skills</a>
+                <a href="certificates & Resume.html" id="nav-certificates" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Certificates & Resume</a>
+                <a href="projects.html" id="nav-projects" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Projects</a>
+                <a href="contact.html" id="nav-contact" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Bright/Dark Mode" class="px-3.5 py-2 rounded-xl bg-slate-900 light:bg-indigo-100/80 border border-cyan-500/30 light:border-indigo-400 text-cyan-400 light:text-indigo-700 font-bold text-xs flex items-center gap-2 hover:scale-105 transition-all shadow-md">
+                    <i id="themeIcon" class="fa-solid fa-sun text-yellow-400 text-sm"></i>
+                    <span id="themeLabel">Glowing Bright</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-600 border border-cyan-500/30">
+                    <i class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden border-b border-cyan-500/20 bg-slate-950 light:bg-white px-6 pt-3 pb-6 space-y-3 font-semibold text-sm">
+            <a href="index.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Home</a>
+            <a href="about.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">About Me</a>
+            <a href="skills.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Skills</a>
+            <a href="certificates & Resume.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Certificates & Resume</a>
+            <a href="projects.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Projects</a>
+            <a href="contact.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <section id="section-skills" class="py-6">
+            <div class="text-center mb-10">
+                <span class="text-xs font-mono font-bold tracking-widest text-cyan-400 light:text-indigo-600 uppercase">INTERACTIVE KNOWLEDGE STACK</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-1">Technical Skills</h2>
+                <p class="text-slate-400 light:text-slate-600 text-sm mt-2">
+                    Click any skill card below to launch its detailed learning modal view with topics, code examples, and downloadable PDF notes!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 01 Programming -->
+                <div onclick="openSkillModal('programming')" data-pdfs="python.pdf,python1.pdf" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-cyan-500/10 text-cyan-400 light:text-indigo-600"><i class="fa-solid fa-code"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">01 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-cyan-400 light:group-hover:text-indigo-600 transition-colors">Programming</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-2">Python, C Language, Object-Oriented Logic</p>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <a href="python.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-[11px] font-mono text-cyan-400 hover:bg-cyan-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> python.pdf
+                        </a>
+                        <a href="python1.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-[11px] font-mono text-cyan-400 hover:bg-cyan-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> python1.pdf
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-bold text-cyan-400 light:text-indigo-600">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 02 Linux & Security Tools -->
+                <div onclick="openSkillModal('linux')" data-pdfs="linux.pdf" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-purple-500/10 text-purple-400 light:text-purple-600"><i class="fa-brands fa-linux"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">02 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-purple-400 light:group-hover:text-purple-600 transition-colors">Linux & Security Tools</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-2">Ubuntu, Bash, Git, VS Code, PowerShell</p>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <a href="linux.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-purple-500/10 border border-purple-500/30 text-[11px] font-mono text-purple-400 hover:bg-purple-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> linux.pdf
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-bold text-purple-400 light:text-purple-600">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 03 Networking Concepts -->
+                <div onclick="openSkillModal('networking')" data-pdfs="networking.pdf,networking1.pdf" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-pink-500/10 text-pink-400 light:text-rose-600"><i class="fa-solid fa-network-wired"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">03 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-pink-400 light:group-hover:text-rose-600 transition-colors">Networking Concepts</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-2">TCP/IP, DNS, DHCP, HTTP, FTP Protocols</p>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <a href="networking.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-pink-500/10 border border-pink-500/30 text-[11px] font-mono text-pink-400 hover:bg-pink-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> networking.pdf
+                        </a>
+                        <a href="networking1.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-pink-500/10 border border-pink-500/30 text-[11px] font-mono text-pink-400 hover:bg-pink-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> networking1.pdf
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-bold text-pink-400 light:text-rose-600">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 04 Python Libraries -->
+                <div onclick="openSkillModal('python-libs')" data-pdfs="python2.pdf" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-amber-500/10 text-amber-400 light:text-amber-600"><i class="fa-brands fa-python"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">04 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-amber-400 light:group-hover:text-amber-600 transition-colors">Python Libraries</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-2">NumPy, Pandas, Matplotlib Data Analytics</p>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <a href="python2.pdf" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono text-amber-400 hover:bg-amber-500/20 transition-colors">
+                            <i class="fa-solid fa-file-pdf"></i> python2.pdf
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-bold text-amber-400 light:text-amber-600">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 05 Cybersecurity & Logs -->
+                <div onclick="openSkillModal('cyber-basics')" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-emerald-500/10 text-emerald-400 light:text-emerald-700"><i class="fa-solid fa-shield-halved"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">05 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-emerald-400 light:group-hover:text-emerald-700 transition-colors">Cybersecurity & Logs</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-4">Log Parsing, Risk Analysis, Attack Monitoring</p>
+                    <div class="flex items-center justify-between text-xs font-bold text-emerald-400 light:text-emerald-700">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 06 Problem Solving -->
+                <div onclick="openSkillModal('softskills')" class="dark-glass light-glass p-6 rounded-3xl border glow-hover cursor-pointer group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl p-3.5 rounded-2xl bg-indigo-500/10 text-indigo-400 light:text-indigo-600"><i class="fa-solid fa-brain"></i></span>
+                        <span class="text-xs font-mono font-bold text-slate-500">06 / SKILL</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display group-hover:text-indigo-400 light:group-hover:text-indigo-600 transition-colors">Problem Solving</h3>
+                    <p class="text-xs text-slate-400 light:text-slate-600 mt-1 mb-4">Logical Thinking, Team Collaboration, Adaptability</p>
+                    <div class="flex items-center justify-between text-xs font-bold text-indigo-400 light:text-indigo-600">
+                        <span>Click to open detailed view</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="skillModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="dark-glass light-glass bg-slate-900 light:bg-white border border-cyan-500/40 light:border-indigo-300 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeSkillModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800 light:bg-slate-200 text-slate-300 light:text-slate-700 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modalHeader" class="mb-6"></div>
+            <div class="border-b border-slate-800 light:border-slate-200 mb-6 flex gap-4 text-xs font-bold">
+                <button onclick="switchModalTab('topics')" id="mTab-topics" class="pb-2 text-cyan-400 border-b-2 border-cyan-400 font-extrabold">Topics Learnt</button>
+                <button onclick="switchModalTab('projects')" id="mTab-projects" class="pb-2 text-slate-400">Related Projects</button>
+                <button onclick="switchModalTab('pdfs')" id="mTab-pdfs" class="pb-2 text-slate-400">PDF Notes</button>
+            </div>
+            <div id="modalBody" class="space-y-4"></div>
+            <div class="mt-8 pt-4 border-t border-slate-800 light:border-slate-200 flex justify-end">
+                <button onclick="closeSkillModal()" class="px-6 py-2.5 rounded-xl bg-slate-800 light:bg-slate-200 text-slate-200 light:text-slate-800 font-bold text-xs">Close Modal</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-cyan-500/20 light:border-slate-200 bg-slate-950 light:bg-white py-6 text-center text-xs text-slate-500 light:text-slate-600">
+        <p>© 2026 Tulugu Sangeetha. B.Tech CSE (Cyber Security) Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

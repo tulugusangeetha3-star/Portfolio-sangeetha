@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulugu Sangeetha | Cybersecurity, Cloud & AI Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyber: { 400: '#38bdf8', 500: '#06b6d4', 600: '#0284c7' },
+                        neonPink: '#ff007f',
+                        neonPurple: '#a855f7',
+                        neonYellow: '#facc15',
+                        brightViolet: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 transition-colors duration-400 min-h-screen flex flex-col justify-between" id="bodyElement">
+
+    <header class="sticky top-0 z-50 bg-slate-950/80 dark:bg-slate-950/80 light:bg-white/80 backdrop-blur-xl border-b border-cyan-500/20 dark:border-cyan-500/20 light:border-indigo-300/40 transition-colors">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative">
+                    <img src="logo.jpeg" alt="Tulugu Sangeetha Profile Avatar" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-cyan-400 dark:border-cyan-400 light:border-indigo-600 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full animate-ping"></span>
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full"></span>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-gradient-neon dark:text-gradient-neon light:text-gradient-bright">
+                        TULUGU SANGEETHA
+                    </span>
+                    <span class="block text-[11px] font-mono font-bold tracking-widest text-cyan-400 dark:text-cyan-400 light:text-indigo-600 uppercase">
+                        Cybersecurity Specialist
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-7 text-sm font-bold">
+                <a href="index.html" id="nav-home" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Home</a>
+                <a href="about.html" id="nav-about" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">About Me</a>
+                <a href="skills.html" id="nav-skills" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Skills</a>
+                <a href="certificates & Resume.html" id="nav-certificates" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Certificates & Resume</a>
+                <a href="projects.html" id="nav-projects" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Projects</a>
+                <a href="contact.html" id="nav-contact" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Bright/Dark Mode" class="px-3.5 py-2 rounded-xl bg-slate-900 light:bg-indigo-100/80 border border-cyan-500/30 light:border-indigo-400 text-cyan-400 light:text-indigo-700 font-bold text-xs flex items-center gap-2 hover:scale-105 transition-all shadow-md">
+                    <i id="themeIcon" class="fa-solid fa-sun text-yellow-400 text-sm"></i>
+                    <span id="themeLabel">Glowing Bright</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-600 border border-cyan-500/30">
+                    <i class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden border-b border-cyan-500/20 bg-slate-950 light:bg-white px-6 pt-3 pb-6 space-y-3 font-semibold text-sm">
+            <a href="index.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Home</a>
+            <a href="about.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">About Me</a>
+            <a href="skills.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Skills</a>
+            <a href="certificates & Resume.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Certificates & Resume</a>
+            <a href="projects.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Projects</a>
+            <a href="contact.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <section id="section-home" class="py-10 min-h-[80vh] flex flex-col justify-center">
+            <div class="text-center max-w-4xl mx-auto space-y-6">
+                <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-cyan-950/60 light:bg-indigo-100 border border-cyan-400/40 light:border-indigo-400 text-cyan-300 light:text-indigo-800 text-xs sm:text-sm font-bold shadow-lg">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 light:bg-indigo-600 animate-pulse"></span>
+                    B.Tech CSE — Cyber Security (2nd Year)
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-tight leading-none">
+                    Hello, I'm <br class="sm:hidden">
+                    <span class="text-gradient-neon dark:text-gradient-neon light:text-gradient-bright">
+                        Tulugu Sangeetha
+                    </span>
+                </h1>
+
+                <h2 class="text-xl sm:text-3xl font-bold text-slate-300 light:text-slate-800 max-w-3xl mx-auto">
+                    Cybersecurity, Cloud Security & Network Defender
+                </h2>
+
+                <p class="text-base sm:text-lg text-slate-400 light:text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                   Building practical skills in cybersecurity, cloud security, and networking through hands-on projects and continuous learning.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                    <a href="about.html" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 hover:scale-105 text-white font-extrabold text-sm sm:text-base shadow-xl transition-all flex items-center gap-2">
+                        <span>Explore About Me</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="projects.html" class="px-8 py-4 rounded-2xl bg-slate-900 light:bg-white text-cyan-400 light:text-indigo-700 border border-cyan-500/40 light:border-indigo-300 hover:border-cyan-400 font-extrabold text-sm sm:text-base shadow-lg hover:scale-105 transition-all">
+                        View Projects (8)
+                    </a>
+
+                    <a href="contact.html" class="px-8 py-4 rounded-2xl bg-slate-900/80 light:bg-indigo-50 text-slate-200 light:text-slate-800 hover:text-cyan-400 font-bold text-sm sm:text-base transition-all">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 text-left">
+                    <div class="p-5 rounded-2xl dark-glass light-glass glow-hover">
+                        <span class="text-xs font-mono text-cyan-400 light:text-indigo-600 font-bold uppercase block">College</span>
+                        <span class="font-extrabold text-sm sm:text-base text-slate-100 light:text-slate-900">VIIT Visakhapatnam</span>
+                    </div>
+                    <div class="p-5 rounded-2xl dark-glass light-glass glow-hover">
+                        <span class="text-xs font-mono text-purple-400 light:text-purple-600 font-bold uppercase block">Specialization</span>
+                        <span class="font-extrabold text-sm sm:text-base text-slate-100 light:text-slate-900">Cyber Security</span>
+                    </div>
+                    <div class="p-5 rounded-2xl dark-glass light-glass glow-hover">
+                        <span class="text-xs font-mono text-pink-400 light:text-rose-600 font-bold uppercase block">Projects</span>
+                        <span class="font-extrabold text-sm sm:text-base text-slate-100 light:text-slate-900">8 Completed</span>
+                    </div>
+                    <div class="p-5 rounded-2xl dark-glass light-glass glow-hover">
+                        <span class="text-xs font-mono text-emerald-400 light:text-emerald-700 font-bold uppercase block">Availability</span>
+                        <span class="font-extrabold text-sm sm:text-base text-emerald-400 light:text-emerald-700">Open for Internships</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-cyan-500/20 light:border-slate-200 bg-slate-950 light:bg-white py-6 text-center text-xs text-slate-500 light:text-slate-600">
+        <p>© 2026 Tulugu Sangeetha. B.Tech CSE (Cyber Security) Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

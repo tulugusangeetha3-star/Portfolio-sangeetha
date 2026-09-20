@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Resume | Tulugu Sangeetha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyber: { 400: '#38bdf8', 500: '#06b6d4', 600: '#0284c7' },
+                        neonPink: '#ff007f',
+                        neonPurple: '#a855f7',
+                        neonYellow: '#facc15',
+                        brightViolet: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 transition-colors duration-400 min-h-screen flex flex-col justify-between" id="bodyElement">
+
+    <header class="sticky top-0 z-50 bg-slate-950/80 dark:bg-slate-950/80 light:bg-white/80 backdrop-blur-xl border-b border-cyan-500/20 dark:border-cyan-500/20 light:border-indigo-300/40 transition-colors">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative">
+                    <img src="logo.jpeg" alt="Tulugu Sangeetha Profile Avatar" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-cyan-400 dark:border-cyan-400 light:border-indigo-600 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full animate-ping"></span>
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-950 rounded-full"></span>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-gradient-neon dark:text-gradient-neon light:text-gradient-bright">
+                        TULUGU SANGEETHA
+                    </span>
+                    <span class="block text-[11px] font-mono font-bold tracking-widest text-cyan-400 dark:text-cyan-400 light:text-indigo-600 uppercase">
+                        Cybersecurity Specialist
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-7 text-sm font-bold">
+                <a href="index.html" id="nav-home" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Home</a>
+                <a href="about.html" id="nav-about" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">About Me</a>
+                <a href="skills.html" id="nav-skills" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Skills</a>
+                <a href="certificates & Resume.html" id="nav-certificates" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Certificates & Resume</a>
+                <a href="projects.html" id="nav-projects" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Projects</a>
+                <a href="contact.html" id="nav-contact" class="nav-link text-slate-300 light:text-slate-700 hover:text-cyan-400 light:hover:text-indigo-600 py-1 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Bright/Dark Mode" class="px-3.5 py-2 rounded-xl bg-slate-900 light:bg-indigo-100/80 border border-cyan-500/30 light:border-indigo-400 text-cyan-400 light:text-indigo-700 font-bold text-xs flex items-center gap-2 hover:scale-105 transition-all shadow-md">
+                    <i id="themeIcon" class="fa-solid fa-sun text-yellow-400 text-sm"></i>
+                    <span id="themeLabel">Glowing Bright</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-slate-900 light:bg-slate-200 text-cyan-400 light:text-indigo-600 border border-cyan-500/30">
+                    <i class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden border-b border-cyan-500/20 bg-slate-950 light:bg-white px-6 pt-3 pb-6 space-y-3 font-semibold text-sm">
+            <a href="index.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Home</a>
+            <a href="about.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">About Me</a>
+            <a href="skills.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Skills</a>
+            <a href="certificates & Resume.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Certificates & Resume</a>
+            <a href="projects.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Projects</a>
+            <a href="contact.html" class="block w-full text-left py-2 px-3 rounded-lg hover:bg-slate-900 light:hover:bg-indigo-50 text-slate-200 light:text-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <!-- Resume Section -->
+        <section id="section-resume" class="py-6 mb-12">
+            <div class="text-center mb-8">
+                <span class="text-xs font-mono font-bold tracking-widest text-cyan-400 light:text-indigo-600 uppercase">PROFESSIONAL PROFILE</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-1">Curriculum Vitae / Resume</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto dark-glass light-glass rounded-3xl overflow-hidden border glow-hover p-6 sm:p-8">
+                <div class="relative group rounded-2xl overflow-hidden border border-slate-800 light:border-slate-200 mb-6">
+                    <img src="resume.jpeg" alt="Tulugu Sangeetha Resume" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-800 light:border-slate-200">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-invoice text-cyan-400 light:text-indigo-600 text-lg"></i>
+                        <span class="text-sm font-semibold text-slate-200 light:text-slate-800">Tulugu_Sangeetha_Resume.jpeg</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="resume.jpeg" target="_blank" class="px-4 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 light:text-indigo-600 hover:bg-cyan-500/20 font-bold text-xs flex items-center gap-2 transition-colors">
+                            <i class="fa-solid fa-expand"></i> View Fullscreen
+                        </a>
+                        <a href="resume.jpeg" download="Tulugu_Sangeetha_Resume.jpeg" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 hover:bg-cyan-400 font-extrabold text-xs flex items-center gap-2 transition-colors shadow-md">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="section-certificates" class="py-6">
+            <div class="text-center mb-10">
+                <span class="text-xs font-mono font-bold tracking-widest text-cyan-400 light:text-indigo-600 uppercase">VERIFIED CREDENTIALS</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-1">Certificates</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c1.jpeg" alt="Cisco Networking Basics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-cyan-500 text-slate-950 font-extrabold text-xs rounded-full shadow-md">CISCO</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-cyan-400 light:text-indigo-600 font-bold uppercase">NETWORKING & SECURITY</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Cisco Networking Basics</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Certification validating foundational understanding of network architecture, IP routing, subnets, and TCP/IP protocol suite operations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-award mr-1 text-cyan-400"></i> Official Cisco</span>
+                        <a href="c1.jpeg" target="_blank" class="text-xs font-bold text-cyan-400 light:text-indigo-600 hover:underline">View Document →</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c2.jpeg" alt="Python for Cybersecurity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-purple-500 text-white font-extrabold text-xs rounded-full shadow-md">PYTHON</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-purple-400 light:text-purple-600 font-bold uppercase">SCRIPTING & SECURITY</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Python for Cybersecurity</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Specialized training covering Python automation scripts, parsing system authentication logs, and security monitoring tools.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-award mr-1 text-purple-400"></i> Cyber Training</span>
+                        <a href="c2.jpeg" target="_blank" class="text-xs font-bold text-purple-400 light:text-purple-600 hover:underline">View Document →</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c3.jpeg" alt="Smart India Hackathon 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-pink-500 text-white font-extrabold text-xs rounded-full shadow-md">SIH 2026</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-pink-400 light:text-rose-600 font-bold uppercase">INNOVATION & HACKATHON</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Smart India Hackathon (SIH)</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Official participation recognition for DRIVE-X AI/ML Dead Reckoning Navigation system built to resolve positioning outages.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-trophy mr-1 text-pink-400"></i> Team Award</span>
+                        <a href="c3.jpeg" target="_blank" class="text-xs font-bold text-pink-400 light:text-rose-600 hover:underline">View Document →</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c4.jpeg" alt="Cloud & Cyber Essentials" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-amber-500 text-slate-950 font-extrabold text-xs rounded-full shadow-md">CLOUD</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-amber-400 light:text-amber-600 font-bold uppercase">CLOUD SECURITY</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Cloud Infrastructure & Security</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Certificate covering cloud architecture foundations, server virtualization, and security protocols in cloud platforms.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-award mr-1 text-amber-400"></i> Cloud Certification</span>
+                        <a href="c4.jpeg" target="_blank" class="text-xs font-bold text-amber-400 light:text-amber-600 hover:underline">View Document →</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c5.jpeg" alt="Linux System Administration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-emerald-500 text-slate-950 font-extrabold text-xs rounded-full shadow-md">LINUX</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-emerald-400 light:text-emerald-700 font-bold uppercase">SYSTEM ADMINISTRATION</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Linux System Administration</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Certification in command line utilities, user permissions, shell scripting, and security auditing on Linux OS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-award mr-1 text-emerald-400"></i> System Training</span>
+                        <a href="c5.jpeg" target="_blank" class="text-xs font-bold text-emerald-400 light:text-emerald-700 hover:underline">View Document →</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 6 -->
+                <div class="dark-glass light-glass rounded-3xl overflow-hidden border glow-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 relative overflow-hidden group">
+                            <img src="c6.jpeg" alt="Cyber Risk Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-indigo-500 text-white font-extrabold text-xs rounded-full shadow-md">SECURITY</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-mono text-indigo-400 light:text-indigo-600 font-bold uppercase">RISK AUDITING</span>
+                            <h3 class="text-xl font-bold font-display text-slate-100 light:text-slate-900 mt-1 mb-2">Cyber Threat & Risk Analysis</h3>
+                            <p class="text-xs text-slate-300 light:text-slate-600 leading-relaxed">
+                                Training on identifying network vulnerabilities, evaluating log risks, and applying core mitigation strategies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800 light:border-slate-200">
+                        <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-shield-halved mr-1 text-indigo-400"></i> Cyber Audit</span>
+                        <a href="c6.jpeg" target="_blank" class="text-xs font-bold text-indigo-400 light:text-indigo-600 hover:underline">View Document →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-cyan-500/20 light:border-slate-200 bg-slate-950 light:bg-white py-6 text-center text-xs text-slate-500 light:text-slate-600">
+        <p>© 2026 Tulugu Sangeetha. B.Tech CSE (Cyber Security) Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
